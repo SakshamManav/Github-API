@@ -1,10 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require("cors")
 dotenv.config();
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 const GitHub_UserName = process.env.github_username;
 const token = process.env.github_token;
 
